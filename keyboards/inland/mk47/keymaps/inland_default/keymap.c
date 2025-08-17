@@ -68,10 +68,10 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color_all(0, 0, 0);
 
             // light only these 4 keys (replace with your rows/cols)
-            rgb_matrix_set_color(KLED(1, 7), RGB_CHARTREUSE); // key 1
-            rgb_matrix_set_color(KLED(1, 8), RGB_CHARTREUSE); // key 2
-            rgb_matrix_set_color(KLED(1, 9), RGB_CHARTREUSE); // key 3
-            rgb_matrix_set_color(KLED(1, 10), RGB_CHARTREUSE); // key 4
+            rgb_matrix_set_color(19, RGB_CHARTREUSE); // key 2
+            rgb_matrix_set_color(20, RGB_CHARTREUSE); // key 2
+            rgb_matrix_set_color(21, RGB_CHARTREUSE); // key 3
+            rgb_matrix_set_color(22, RGB_CHARTREUSE); // key 1
             break;
 
         case 2:
@@ -83,3 +83,16 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     }
     return false;
 }
+
+/*
+ * ChatGPT creation for debugging. Prints out the key index and its LED index.
+ * Helpful to figure out lighting.
+*/
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//     if (record->event.pressed) {
+//         uint8_t row = record->event.key.row;
+//         uint8_t col = record->event.key.col;
+//         uprintf("row:%u col:%u -> LED index:%d\n", row, col, g_led_config.matrix_co[row][col]);
+//     }
+//     return true;
+// }
