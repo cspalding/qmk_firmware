@@ -34,3 +34,9 @@
 /* allow per-layer lighting */
 #define RGBLIGHT_LAYERS
 #define RGBLIGHT_MAX_LAYERS 4
+
+#define TAPPING_TERM 200
+#define HOLD_ON_OTHER_KEY_PRESS   // hold wins after pressing another key
+// if the above two lines feel weird try this config (from ChatGPT):
+// #define PERMISSIVE_HOLD           // favor hold if another key is pressed during tap window
+// #define IGNORE_MOD_TAP_INTERRUPT  // smoother rolls on home-row mods
