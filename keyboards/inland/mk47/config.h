@@ -33,7 +33,7 @@
 
 /* allow per-layer lighting */
 #define RGBLIGHT_LAYERS
-#define RGBLIGHT_MAX_LAYERS 4
+#define RGBLIGHT_MAX_LAYERS 6
 
 #define TAPPING_TERM 200
 // #define HOLD_ON_OTHER_KEY_PRESS   // hold wins after pressing another key
