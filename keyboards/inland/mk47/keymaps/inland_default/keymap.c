@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT_planck_mit(
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_EQL,  KC_7,    KC_8,    KC_9, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LSFT, KC_TRNS, KC_MINS, KC_4,    KC_5,    KC_6, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DOT,  KC_1,    KC_2,    KC_3, KC_RSFT, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_LCTL, KC_LALT, KC_LCMD, KC_TRNS, KC_DOT,  KC_1,    KC_2,    KC_3, KC_RSFT, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,      KC_TRNS, KC_TRNS, KC_0, KC_TRNS, KC_TRNS
     ),
 
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [4] = LAYOUT_planck_mit(
-        KC_TRNS, KC_GRV,  KC_LPRN, KC_LBRC, KC_LCBR, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_GRV,  KC_LPRN, KC_LBRC, KC_LCBR, KC_BSLS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_COMM, KC_RPRN, KC_RBRC, KC_RCBR, KC_TRNS, KC_TRNS, KC_TRNS,  KC_RSFT, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_DOT,  KC_EQL,  KC_PIPE, KC_UNDS, KC_TRNS, KC_TRNS, KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_RSFT,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS,      KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
@@ -90,6 +90,9 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color_all(0, 0, 0);
 
             rgb_matrix_set_color(16, RGB_CHARTREUSE); // LSFT
+            rgb_matrix_set_color(26, RGB_CHARTREUSE); // LCTL
+            rgb_matrix_set_color(27, RGB_CHARTREUSE); // LALT
+            rgb_matrix_set_color(28, RGB_CHARTREUSE); // LGUI
 
             // light only these 4 keys (replace with your rows/cols)
             rgb_matrix_set_color(44, RGB_CHARTREUSE); // 0
@@ -109,7 +112,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color(8, RGB_CHARTREUSE); // 8
             rgb_matrix_set_color(9, RGB_CHARTREUSE); // 9
             break;
-        
+
         case 2:
             rgb_matrix_set_color_all(0, 0, 0);
 
@@ -131,7 +134,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
         case 3:
             rgb_matrix_set_color_all(0, 0, 0);
-        
+
             rgb_matrix_set_color(7, RGB_PURPLE);
             rgb_matrix_set_color(10, RGB_PURPLE);
 
@@ -157,6 +160,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color(2, RGB_CYAN);
             rgb_matrix_set_color(3, RGB_CYAN);
             rgb_matrix_set_color(4, RGB_CYAN);
+            rgb_matrix_set_color(5, RGB_CYAN);
 
             rgb_matrix_set_color(13, RGB_CYAN);
             rgb_matrix_set_color(14, RGB_CYAN);
