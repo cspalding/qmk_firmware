@@ -221,12 +221,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case WRDLEFT:
                 register_code(KC_LALT);
                 tap_code(KC_LEFT);
-                unregister_code(KC_LALT);
                 break;
             case WRDRGHT:
                 register_code(KC_LALT);
                 tap_code(KC_RIGHT);
-                unregister_code(KC_LALT);
                 break;
         }
     }
