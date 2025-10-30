@@ -35,7 +35,7 @@
 #define RGBLIGHT_LAYERS
 #define RGBLIGHT_MAX_LAYERS 6
 
-#define TAPPING_TERM 150
+#define TAPPING_TERM 200
 // #define HOLD_ON_OTHER_KEY_PRESS   // hold wins after pressing another key
 // if the above two lines feel weird try this config (from ChatGPT):
 // #define PERMISSIVE_HOLD           // favor hold if another key is pressed during tap window
